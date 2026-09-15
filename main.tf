@@ -81,6 +81,14 @@ resource "aws_security_group" "web" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+  description = "Jenkins"
+  from_port   = 8080
+  to_port     = 8080
+  protocol    = "tcp"
+  cidr_blocks = ["49.37.221.79/32"]
+}
+
   egress {
     description = "Allow outbound traffic"
     from_port   = 0
