@@ -82,12 +82,12 @@ resource "aws_security_group" "web" {
   }
 
   ingress {
-  description = "Jenkins"
-  from_port   = 8080
-  to_port     = 8080
-  protocol    = "tcp"
-  cidr_blocks = ["49.37.221.79/32"]
-}
+    description = "Jenkins"
+    from_port   = 8080
+    to_port     = 8080
+    protocol    = "tcp"
+    cidr_blocks = ["49.37.221.79/32"]
+  }
 
   egress {
     description = "Allow outbound traffic"
