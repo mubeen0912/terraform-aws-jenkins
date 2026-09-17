@@ -86,7 +86,7 @@ resource "aws_security_group" "web" {
     from_port   = 8080
     to_port     = 8080
     protocol    = "tcp"
-    cidr_blocks = ["49.37.221.79/32"]
+    cidr_blocks = ["49.37.217.35/32"]
   }
 
   egress {
@@ -102,7 +102,7 @@ resource "aws_security_group" "web" {
   }
 }
 
-resource "aws_instance" "web_a" {
+resource "aws_instance" "app" {
   ami                    = "ami-0b6d9d3d33ba97d99"
   instance_type          = var.instance_type
   subnet_id              = aws_subnet.public_a.id
